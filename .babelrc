@@ -1,0 +1,16 @@
+{
+	"plugins": [
+		"babel-plugin-styled-components"
+	],
+	"presets": [
+		"@babel/preset-typescript",
+		[
+			"babel-preset-gatsby",
+			{
+				"targets": {
+					"browsers": [">0.25%", "not dead"]
+				}
+			}
+		]
+	]
+}
