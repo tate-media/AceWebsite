@@ -1,0 +1,58 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jest": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:jsx-a11y/recommended",
+		"plugin:prettier/recommended",
+		"plugin:react/recommended"
+	],
+	"overrides": [
+		{
+			"extends": ["plugin:@typescript-eslint/recommended"],
+			"files": ["**/*.ts?(x)"],
+			"parser": "@typescript-eslint/parser",
+			"parserOptions": {
+				"ecmaFeatures": {
+					"jsx": true
+				},
+				"ecmaVersion": 2018,
+				"sourceType": "module"
+			},
+			"plugins": ["@typescript-eslint"]
+		},
+		{
+			"extends": [
+				"plugin:jest-dom/recommended",
+				"plugin:testing-library/react"
+			],
+			"files": [
+				"**/__tests__/**/*.[jt]s?(x)",
+				"**/?(*.)+(spec|test).[jt]s?(x)"
+			]
+		}
+	],
+	"parser": "@babel/eslint-parser",
+	"plugins": [
+		"jest-dom",
+		"prettier",
+		"react",
+		"testing-library"
+	],
+	"rules": {
+		"no-unused-vars": "error",
+		"prettier/prettier": "error",
+		"quotes": ["error", "double", { "avoidEscape":  true }],
+		"react/prop-types": "error",
+		"sort-imports": "error"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}
