@@ -11,7 +11,7 @@
 		"noUnusedLocals": true,
 		"strict": true,
 		"target": "ESNext",
-		"types": ["node", "jest", "@testing-library/cypress"]
+		"types": ["node", "jest", "@testing-library/jest-dom"]
 	},
 	"exclude": ["**/*.js"]
 }
