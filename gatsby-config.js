@@ -1,4 +1,6 @@
-require("dotenv").config({});
+require("dotenv").config({
+	path: `.env.${process.env.NODE_ENV}`,
+});
 
 exports.siteMetadata = {
 	description: "",
@@ -17,6 +19,14 @@ exports.plugins = [
 			displayName: process.env.NODE_ENV === "development",
 		},
 	},
+	/*
+	{
+		resolve: "gatsby-source-wordpress",
+		options: {
+			url: process.env.WPGRAPHQL_URL,
+		},
+	},
+	 */
 	{
 		resolve: "gatsby-plugin-robots-txt",
 		options: {
